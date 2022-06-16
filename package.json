@@ -43,13 +43,15 @@
     ]
   },
   "resolutions": {
-    "styled-components": "^5"
+    "styled-components": "^5",
+    "eslint-plugin-react": "^7.27.1"
+
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.17.0",
-    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react": "^7.27.1",
     "prettier": "^2.7.0"
   }
 }

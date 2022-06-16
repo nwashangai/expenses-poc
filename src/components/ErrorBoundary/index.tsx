@@ -8,16 +8,16 @@ type Props = {
 
 type State = {
   hasError: boolean;
-  error: any;
+  error: unknown | null;
 };
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: any) {
+  constructor(props: Props) {
     super(props);
     this.state = { hasError: false, error: null };
   }
 
-  static getDerivedStateFromError(error: any) {
+  static getDerivedStateFromError(error: unknown) {
     return { hasError: true, error };
   }
 
@@ -34,7 +34,7 @@ class ErrorBoundary extends Component<Props, State> {
                   title="System Error"
                   bordered={false}
                 >
-                  <p>{this.state.error.toString()}</p>
+                  <p>{(this.state.error as Object).toString()}</p>
                 </ErrorCard>
               </ErrorContainer>
             }
