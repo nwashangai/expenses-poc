@@ -18,7 +18,7 @@ function App() {
       <Header onChange={handleSortBy} />
       {loading ? (
         <SpinnerWrapper>
-          <Spin size="large"/>
+          <Spin size="large" />
         </SpinnerWrapper>
       ) : (
         <Table

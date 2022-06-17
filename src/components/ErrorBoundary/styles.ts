@@ -28,6 +28,6 @@ export const ErrorCard = styled(Card)`
   }
 
   p {
-      padding: 0 20px;
+    padding: 0 20px;
   }
 `;

@@ -35,15 +35,13 @@ const group_by = (column: COLUMN, data: ExpensesType[]) => {
   } else {
     const newData: ExpensesType[] = [];
 
-    totalAmount = data.reduce(
-      (prev: number, current: ExpensesType) =>
-        {
-          newData.push({...current, amount: parseFloat(current.amount.replace(",", "")).toString()})
-          return prev + parseFloat(current.amount.replace(",", ""))
-        },
-      totalAmount
-    );
-    
+    totalAmount = data.reduce((prev: number, current: ExpensesType) => {
+      newData.push({
+        ...current,
+        amount: parseFloat(current.amount.replace(",", "")).toString(),
+      });
+      return prev + parseFloat(current.amount.replace(",", ""));
+    }, totalAmount);
 
     return { totalAmount: totalAmount.toFixed(2), data: newData };
   }
@@ -51,6 +49,7 @@ const group_by = (column: COLUMN, data: ExpensesType[]) => {
 
 export const loadExpensesData = async (column: COLUMN) => {
   const response = await fetch(EXPENSES_URL);
+  
   const data = await response.json();
   return group_by(column, data);
 };

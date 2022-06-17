@@ -6,7 +6,7 @@ type Data = {
   amount: string;
   date?: string;
   member_name?: string;
-}
+};
 
 export type DataStateType = {
   data: Data[];

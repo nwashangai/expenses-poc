@@ -12,10 +12,10 @@ export enum ACTION {
   CHANGE_COLUMN = "CHANGE_COLUMN",
   CHANGE_PAGE = "CHANGE_PAGE",
   CHANGE_LIMIT = "CHANGE_LIMIT",
-  START_LOADING = "START_LOADING"
+  START_LOADING = "START_LOADING",
 }
 
-export const EXPENSES_URL = '/mock/expensesData.json'
+export const EXPENSES_URL = "/mock/expensesData.json";
 
 export type ExpensesType = {
   departments: string;
@@ -26,9 +26,9 @@ export type ExpensesType = {
 };
 
 export const columns = {
-  departments: 'Departments',
-  project_name: 'Project Name',
-  date: 'Date',
-  member_name: 'Name',
+  departments: "Departments",
+  project_name: "Project Name",
+  date: "Date",
+  member_name: "Name",
   amount: "Amount",
-}
+};

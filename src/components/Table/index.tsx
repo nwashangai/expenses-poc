@@ -20,6 +20,7 @@ const columnObj: ColumnsType<ExpensesType> = [
   {
     title: columns.amount,
     dataIndex: COLUMN.Amount,
+    render: (amount: string) => amount.replace(/\B(?=(\d{3})+(?!\d))/g, ","),
     sorter: {
       compare: (a: any, b: any) => parseFloat(a.amount) - parseFloat(b.amount),
     },
@@ -62,6 +63,7 @@ const generateColumn = (column) => {
       {
         title: columns.amount,
         dataIndex: COLUMN.Amount,
+        render: (amount: string) => amount.replace(/\B(?=(\d{3})+(?!\d))/g, ","),
         sorter: {
           compare: (a: any, b: any) =>
             parseFloat(a.amount) - parseFloat(b.amount),
